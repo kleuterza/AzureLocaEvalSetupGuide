@@ -1,15 +1,15 @@
 # This script is used to create two VMs on your hyper-v host that will be used as cluster nocde for the Azure Local cluster
 
 $arrVMNAme = @()
-$arrVMNAme += "AzureLocalNode1"
-$arrVMNAme += "AzureLocalNode2"
+$arrVMNAme += "ALNode1"
+$arrVMNAme += "ALNode2"
 
 # depending on the CPU in your host, you might want to adjust the numer of cores that the VMs get assigned
 $CPUCores = 16
 
-$VMSwitchName = "External 2500"
-$VHDXPath = "E:\Hyper-V\AzureLocal"
-$OSInstallIsoPath = "E:\Hyper-V\AzureLocal\AZURESTACKHci23H2.25398.469.LCM.10.2408.0.3061.x64.en-us.iso"
+$VMSwitchName = "External"
+$VHDXPath = "C:\MSLAB\AzureLocal"
+$OSInstallIsoPath = "C:MSLAB\AzureLocal\AzureLocal23H2.25398.469.LCM.10.2503.0.3057.x64.en-us.iso"
 
 # loops through the arry and create VMs
 foreach($VMName in $arrVMNAme) {
